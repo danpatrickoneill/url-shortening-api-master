@@ -1,0 +1,35 @@
+.shortly-button {
+  color: white;
+  background-color: #33cccc;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  color: white;
+  background-color: #33cccc;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav h2 {
+  display: inline;
+  color: black;
+}
+nav a {
+  color: #cccccc;
+}
+nav a:hover {
+  color: black;
+}
+footer nav {
+  background-color: black;
+}
