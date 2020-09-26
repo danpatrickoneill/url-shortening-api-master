@@ -33,6 +33,7 @@ body {
 
 .container {
   max-width: 1440px;
+  width: 80%;
   margin: auto;
 }
 
@@ -66,8 +67,34 @@ nav {
 header {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 0 8rem;
 }
 
+main {
+  background-color: @link-gray;
+  padding: 8rem 0 2rem;
+}
+
+.link-shortener {
+  margin: auto;
+  margin-top: -10rem;
+  padding: 2rem;
+  background-image: url('../images/bg-shorten-desktop.svg');
+  background-color: @very-dark-violet;
+  z-index: 1;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 70%;
+    border-radius: 0.5rem;
+  }
+  button {
+    width: 20%;
+  }
+}
 // footer {
 //   nav {
 //     background-color: black;
