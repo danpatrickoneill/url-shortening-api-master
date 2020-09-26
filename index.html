@@ -1,83 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Google fonts import -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-  Features
-  Pricing
-  Resources
 
-  Login
-  Sign Up
+    <title>Shortly | More than just shorter links</title>
 
-  More than just shorter links
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-  Get Started
-
-  Shorten It!
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="links">
+          <a href="index.html"><h2>Shortly</h2></a>
+          <a href="#">Pricing</a>
+          <a href="#">Features</a>
+          <a href="#">Resources</a>
+        </div>
+        <div class="actions">
+          <a href="#">Login</a>
+          <a href="#"><button>Sign Up</button></a>
+        </div>
+      </nav>
+      <header>
+        <div class="text">
+          <h1>More than just shorter links</h1>
+          <p></p>
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button>Get Started</button>
+      </div>
+      <div class="image"><img src="images/illustration-working.svg" alt="A faceless figure sitting at a desk using a computer"></div>
+      </header>
+      <main>
+        <section class="link-shortener">
+          <input type="text" placeholder="Shorten a link here..." />
+          <button>Shorten It!</button>
+        </section>
+        <h3>Advanced Statistics</h3>
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+        <div class="card"><img src="images/icon-brand-recognition.svg" alt="A generic bar graph indicating growth"><h4>Brand Recognition</h4><p>Boost your brand recognition with each click. Generic
+      links don’t mean a thing. Branded links help instill confidence in your
+      content.</p></div>
+        <div class="card"><img src="images/icon-detailed-records.svg" alt="A generic radial gauge pointing right to its middle"><h4>Detailed Records</h4><p>Gain insights into who is clicking your links.
+      Knowing when and where people engage with your content helps inform better
+      decisions.</p></div>
+        <div class="card"><img src="images/icon-fully-customizable.svg" alt="A market, a fountain pen and a paintbrush"><h4>Fully Customizable</h4><p>Improve brand awareness and content
+      discoverability through customizable links, supercharging audience
+      engagement.</p></div>
+      </main>
+      <footer>
+        <h3>Boost your links today</h3>
+        <button>Get Started</button>
+        <nav><a href="index.html"><h2>Shortly</h2></a>
+          <div class="column">
+            <h5>Features</h5>
+            <a href="#">Link Shortening</a>
+            <a href="#">Branded Links</a>
+            <a href="#">Analytics</a>
+          </div>
+          <div class="column">
+            <h5>Resources</h5>
+            <a href="#">Blog</a>
+            <a href="#">Developers</a>
+            <a href="#">Support</a>
+          </div>
+          <div class="column">
+            <h5>Company</h5>
+            <a href="#">About</a>
+            <a href="#">Our Team</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="social-icons">
+            <a href="#"><img src="images/icon-facebook.svg" alt="Facebook's logo, a lowercase f inside a little square"></a>
+            <a href="#"><img src="images/icon-twitter.svg" alt="Twitter's logo, a cartoonish little bird"></a>
+            <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest's logo, a P inside of a circle"></a>
+            <a href="#"><img src="images/icon-instagram.svg" alt="Instagram's logo, a little camera"></a>
+          </div>
+        </nav>
+      </footer>             
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="danoneill.dev">Dan O'Neill</a>.
+    </div>
+  </body>
 </html>
