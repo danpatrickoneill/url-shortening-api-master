@@ -90,5 +90,28 @@ footer .call-to-action h3 {
   color: white;
 }
 footer nav {
+  display: flex;
+  justify-content: space-between;
   background-color: black;
+  padding: 2rem;
+}
+footer nav h2 {
+  color: white;
+  margin: 0;
+}
+footer nav .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer nav .column h5 {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+footer nav .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
 }
