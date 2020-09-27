@@ -1,12 +1,3 @@
-.shortly-button {
-  color: white;
-  background-color: hsl(180, 66%, 49%);
-  border: none;
-  border-radius: 100px;
-  padding: 0.5rem 2rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-}
 body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -14,6 +5,7 @@ body {
 }
 .container {
   max-width: 1440px;
+  width: 80%;
   margin: auto;
 }
 h1 {
@@ -48,4 +40,69 @@ nav a:hover {
 header {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 0 8rem;
+}
+main {
+  background-color: #cccccc;
+  padding: 8rem 0 2rem;
+}
+.link-shortener {
+  margin: auto;
+  margin-top: -10rem;
+  padding: 2rem;
+  background-image: url('../images/bg-shorten-desktop.svg');
+  background-color: hsl(260, 8%, 14%);
+  z-index: 1;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.link-shortener input {
+  width: 70%;
+  border-radius: 0.5rem;
+}
+.link-shortener button {
+  width: 20%;
+}
+footer {
+  background-image: url('../images/bg-shorten-desktop.svg');
+  background-color: hsl(260, 8%, 14%);
+}
+footer .call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+footer .call-to-action h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: white;
+}
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 2rem;
+}
+footer nav h2 {
+  color: white;
+  margin: 0;
+}
+footer nav .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer nav .column h5 {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+footer nav .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
 }
