@@ -7,7 +7,7 @@ import instagram from '../images/icon-instagram.svg';
 const Footer = () => {
   return (
     <footer>
-      <div class='call-to-action'>
+      <div className='call-to-action'>
         <h3>Boost your links today</h3>
         <button>Get Started</button>
       </div>
@@ -15,26 +15,26 @@ const Footer = () => {
         <a href='index.html'>
           <h2>Shortly</h2>
         </a>
-        <div class='column'>
+        <div className='column'>
           <h5>Features</h5>
           <a href='#'>Link Shortening</a>
           <a href='#'>Branded Links</a>
           <a href='#'>Analytics</a>
         </div>
-        <div class='column'>
+        <div className='column'>
           <h5>Resources</h5>
           <a href='#'>Blog</a>
           <a href='#'>Developers</a>
           <a href='#'>Support</a>
         </div>
-        <div class='column'>
+        <div className='column'>
           <h5>Company</h5>
           <a href='#'>About</a>
           <a href='#'>Our Team</a>
           <a href='#'>Careers</a>
           <a href='#'>Contact</a>
         </div>
-        <div class='social-icons'>
+        <div className='social-icons'>
           <a href='#'>
             <img
               src={facebook}
