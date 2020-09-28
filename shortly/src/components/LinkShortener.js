@@ -1,51 +1,6 @@
 import React, { useState } from 'react';
 const axios = require('axios');
 
-// class LinkShortener extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       fetching: false,
-//       url: 'https://news.ycombinator.com/',
-//       shortened: '',
-//     };
-//   }
-
-//   handleChange(e) {
-//     this.setState({ url: e.target.value });
-//   }
-
-//   shortenLink(e) {
-//     e.preventDefault();
-//     this.setState({ fetching: true });
-//     axios
-//       .post('https://rel.ink/api/links/', { url: this.state.url })
-//       .then((res) => {
-//         console.log(res.data);
-//         this.setState({
-//           shortened: 'https://rel.ink/' + res.data.hashid,
-//           fetching: false,
-//         });
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   }
-
-//   render() {
-//     return (
-//       <form className='link-shortener' onSubmit={(e) => this.shortenLink(e)}>
-//         <input
-//           type='text'
-//           placeholder='Shorten a link here...'
-//           onChange={(e) => this.handleChange(e)}
-//         />
-//         <button>{this.state.fetching ? 'Fetching...' : 'Shorten It!'}</button>
-//       </form>
-//     );
-//   }
-// }
-
 const LinkShortener = () => {
   const [link, setLink] = useState('https://news.ycombinator.com/');
   const [shortened, setShortened] = useState('');
