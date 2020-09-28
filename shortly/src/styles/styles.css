@@ -47,7 +47,7 @@ main {
   background-color: #f0f1f6;
   padding: 8rem 0 2rem;
 }
-.full-width {
+.full-width-main {
   margin: 0 -9999rem;
   padding: 0 9999rem;
   padding-bottom: 2rem;
@@ -81,6 +81,14 @@ main {
 .saved-link .action-items {
   display: flex;
   align-items: center;
+}
+.full-width-footer {
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+}
+.full-width-nav {
+  margin: 0 -9999rem;
+  padding: 2rem 9999rem;
 }
 footer {
   background-image: url('../images/bg-shorten-desktop.svg');

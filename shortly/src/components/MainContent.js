@@ -6,7 +6,7 @@ import utensils from '../images/icon-fully-customizable.svg';
 
 const MainContent = () => {
   return (
-    <main className='full-width'>
+    <main className='full-width-main'>
       <LinkShortener />
       <h3>Advanced Statistics</h3>
       <p>

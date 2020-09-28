@@ -6,12 +6,12 @@ import instagram from '../images/icon-instagram.svg';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='full-width-footer'>
       <div className='call-to-action'>
         <h3>Boost your links today</h3>
         <button>Get Started</button>
       </div>
-      <nav>
+      <nav className='full-width-nav'>
         <a href='index.html'>
           <h2>Shortly</h2>
         </a>
