@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .App {
@@ -81,9 +82,15 @@ main {
   padding: 8rem 0 2rem;
 }
 
+.full-width-gray {
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+  background: #f0f1f6;
+}
+
 .link-shortener {
-  margin: auto;
-  margin-top: -10rem;
+  position: relative;
+  top: -3rem;
   padding: 2rem;
   background-image: url('../images/bg-shorten-desktop.svg');
   background-color: @very-dark-violet;
@@ -99,6 +106,20 @@ main {
   }
   button {
     width: 20%;
+  }
+}
+
+.saved-link {
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0.25rem;
+
+  .action-items {
+    display: flex;
+    align-items: center;
   }
 }
 
