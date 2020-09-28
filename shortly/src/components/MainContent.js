@@ -13,7 +13,7 @@ const MainContent = () => {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <div class='card'>
+      <div className='card'>
         <img src={graph} alt='A generic bar graph indicating growth' />
         <h4>Brand Recognition</h4>
         <p>
@@ -21,7 +21,7 @@ const MainContent = () => {
           a thing. Branded links help instill confidence in your content.
         </p>
       </div>
-      <div class='card'>
+      <div className='card'>
         <img
           src={gauge}
           alt='A generic radial gauge pointing right to its middle'
@@ -32,7 +32,7 @@ const MainContent = () => {
           people engage with your content helps inform better decisions.
         </p>
       </div>
-      <div class='card'>
+      <div className='card'>
         <img src={utensils} alt='A marker, a fountain pen and a paintbrush' />
         <h4>Fully Customizable</h4>
         <p>
