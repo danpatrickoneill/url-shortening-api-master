@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import SavedLinks from './SavedLinks';
+import SavedLinksContainer from './SavedLinksContainer';
 import { useLocalStorage } from '../utilities/useLocalStorage';
 const axios = require('axios');
 
@@ -51,7 +51,7 @@ const LinkShortener = () => {
         />
         <button>{fetching ? 'Fetching...' : 'Shorten It!'}</button>
       </form>
-      <SavedLinks props={linkPairs} />
+      <SavedLinksContainer linkPairs={linkPairs} />
     </>
   );
 };
