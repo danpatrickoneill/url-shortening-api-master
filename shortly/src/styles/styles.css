@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
 }
-.container {
+.App {
   max-width: 1440px;
   width: 80%;
   margin: auto;
