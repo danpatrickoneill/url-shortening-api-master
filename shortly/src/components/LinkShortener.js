@@ -1,103 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 const axios = require('axios');
 
-// async function shortenLink(url) {
-//   function generateLink(url) {
-//     return axios
-//       .post('https://rel.ink/api/links/', { url })
-//       .then((res) => res.data)
+// class LinkShortener extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       fetching: false,
+//       url: 'https://news.ycombinator.com/',
+//       shortened: '',
+//     };
+//   }
+
+//   handleChange(e) {
+//     this.setState({ url: e.target.value });
+//   }
+
+//   shortenLink(e) {
+//     e.preventDefault();
+//     this.setState({ fetching: true });
+//     axios
+//       .post('https://rel.ink/api/links/', { url: this.state.url })
+//       .then((res) => {
+//         console.log(res.data);
+//         this.setState({
+//           shortened: 'https://rel.ink/' + res.data.hashid,
+//           fetching: false,
+//         });
+//       })
 //       .catch((err) => {
 //         console.log(err);
 //       });
 //   }
-//   const dataPromise = generateLink(url);
-//   const dataIWant = await generateLink(url);
 
-//   console.log(dataPromise);
-
-//   console.log(dataIWant);
-
-//   return dataIWant;
-
-//   let base = 'https://rel.ink/';
-//   const hashId = dataPromise
-//     .then((data) => {
-//       // console.log(base + data.hashid);
-//       return data.hashid;
-//     })
-//     .catch((err) => console.log(err));
-//   console.log(hashId);
+//   render() {
+//     return (
+//       <form className='link-shortener' onSubmit={(e) => this.shortenLink(e)}>
+//         <input
+//           type='text'
+//           placeholder='Shorten a link here...'
+//           onChange={(e) => this.handleChange(e)}
+//         />
+//         <button>{this.state.fetching ? 'Fetching...' : 'Shorten It!'}</button>
+//       </form>
+//     );
+//   }
 // }
 
-// const shortened = ['https://rel.ink/', null];
-// shortenLink('https://news.ycombinator.com/').then((res) => {
-//   shortened[1] = res.hashid;
-//   // console.log(shortened.join(''));
-// });
+const LinkShortener = () => {
+  const [link, setLink] = useState('https://news.ycombinator.com/');
+  const [shortened, setShortened] = useState('');
+  const [fetching, setFetching] = useState(false);
 
-// console.log(shortened);
-// shortenLink('https://news.ycombinator.com/');
+  const handleChange = (e) => {
+    setLink(e.target.value);
+  };
 
-class LinkShortener extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fetching: false,
-      url: 'https://news.ycombinator.com/',
-      shortened: '',
-    };
-  }
-
-  handleChange(e) {
-    this.setState({ url: e.target.value });
-  }
-
-  shortenLink(e) {
+  const shortenLink = (e) => {
     e.preventDefault();
-    this.setState({ fetching: true });
+    setFetching(true);
     axios
-      .post('https://rel.ink/api/links/', { url: this.state.url })
+      .post('https://rel.ink/api/links/', { url: link })
       .then((res) => {
         console.log(res.data);
-        this.setState({
-          shortened: 'https://rel.ink/' + res.data.hashid,
-          fetching: false,
-        });
+        setShortened('https://rel.ink/' + res.data.hashid);
+        setFetching(false);
       })
       .catch((err) => {
         console.log(err);
+        setFetching(false);
       });
-  }
-  // const dataPromise = generateLink(url);
-  // const dataIWant = await generateLink(url);
+  };
 
-  // console.log(dataPromise);
-
-  // console.log(dataIWant);
-
-  // return dataIWant;
-
-  // let base = 'https://rel.ink/';
-  // const hashId = dataPromise
-  //   .then((data) => {
-  //     // console.log(base + data.hashid);
-  //     return data.hashid;
-  //   })
-  //   .catch((err) => console.log(err));
-  // console.log(hashId);
-
-  render() {
-    return (
-      <form className='link-shortener' onSubmit={(e) => this.shortenLink(e)}>
-        <input
-          type='text'
-          placeholder='Shorten a link here...'
-          onChange={(e) => this.handleChange(e)}
-        />
-        <button>Shorten It!</button>
-      </form>
-    );
-  }
-}
+  return (
+    <form className='link-shortener' onSubmit={(e) => shortenLink(e)}>
+      <input
+        type='text'
+        placeholder='Shorten a link here...'
+        onChange={(e) => handleChange(e)}
+      />
+      <button>{fetching ? 'Fetching...' : 'Shorten It!'}</button>
+    </form>
+  );
+};
 
 export default LinkShortener;
