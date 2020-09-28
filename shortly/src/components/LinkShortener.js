@@ -47,19 +47,19 @@ class LinkShortener extends React.Component {
     };
   }
 
-  shortenLink(url) {
-    function generateLink(url) {
-      return axios
-        .post('https://rel.ink/api/links/', { url })
-        .then((res) => {
-          console.log(res.data);
-          this.setState({ shortened: 'https://rel.ink/' + res.data.hashid });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  }
+  shortenLink = (e) => {
+    e.preventDefault();
+
+    axios
+      .post('https://rel.ink/api/links/', { url: this.state.url })
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ shortened: 'https://rel.ink/' + res.data.hashid });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   // const dataPromise = generateLink(url);
   // const dataIWant = await generateLink(url);
 
@@ -80,9 +80,9 @@ class LinkShortener extends React.Component {
 
   render() {
     return (
-      <form className='link-shortener'>
+      <form className='link-shortener' onSubmit={(e) => this.shortenLink(e)}>
         <input type='text' placeholder='Shorten a link here...' />
-        <button onClick={this.shortenLink(this.state.u)}>Shorten It!</button>
+        <button>Shorten It!</button>
       </form>
     );
   }
