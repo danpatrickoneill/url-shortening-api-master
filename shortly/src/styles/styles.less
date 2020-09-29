@@ -31,16 +31,23 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   overflow-x: hidden;
+
+  @media @mobile {
+    overflow-x: hidden;
+  }
 }
 
 .App {
   max-width: 1440px;
   width: 60%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 3rem;
 
   @media @mobile {
     max-width: 375px;
+    width: 360px;
+    margin: 0;
+    padding: 15px;
   }
 }
 
@@ -107,6 +114,17 @@ header {
 
   @media @mobile {
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .text {
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   h1 {
@@ -118,6 +136,9 @@ header {
 
     @media @mobile {
       min-width: 100%;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      text-align: center;
     }
   }
 
@@ -125,13 +146,22 @@ header {
     margin: 0;
     font-size: 1.5rem;
     color: @grayish-violet;
+
+    @media @mobile {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
   }
 
   .image {
     position: relative;
     left: 5rem;
     @media @mobile {
+      position: static;
       order: -1;
+      width: 100%;
     }
   }
 
@@ -140,6 +170,10 @@ header {
     padding: 0.75rem 2.5rem;
     margin-top: 1rem;
     margin-left: 0.25rem;
+
+    @media @mobile {
+      margin-left: 0;
+    }
   }
 }
 
@@ -193,6 +227,7 @@ main {
 
     @media @mobile {
       flex-direction: column;
+      width: 267.5px;
     }
 
     .input-container {
@@ -254,6 +289,10 @@ main {
       background-color: white;
       padding: 0 2rem;
       margin: 0 1rem;
+
+      @media @mobile {
+        margin-top: 1rem;
+      }
 
       img {
         position: relative;
@@ -345,11 +384,20 @@ footer {
       margin: 0;
       color: white;
       font-size: 2.5rem;
+
+      @media @mobile {
+        font-size: 1.5rem;
+        text-align: center;
+      }
     }
 
     button {
       margin-top: 1rem;
       padding: 1rem 3rem;
+
+      @media @mobile {
+        font-size: 1.25rem;
+      }
     }
   }
 
@@ -357,6 +405,12 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: black;
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
     h2 {
       color: white;
       margin: 0;
@@ -366,6 +420,13 @@ footer {
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+
+      @media @mobile {
+        // width: 30%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        align-items: center;
+      }
       h5 {
         font-size: 1rem;
         color: white;
@@ -373,11 +434,17 @@ footer {
       }
       a {
         padding: 0.25rem 0;
+        font-weight: normal;
       }
     }
     .social-icons {
       display: flex;
       justify-content: space-between;
+
+      @media @mobile {
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
     }
 
     @media @mobile {

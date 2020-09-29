@@ -4,15 +4,23 @@ body {
   font-size: 18px;
   overflow-x: hidden;
 }
+@media (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .App {
   max-width: 1440px;
   width: 60%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 3rem;
 }
 @media (max-width: 400px) {
   .App {
     max-width: 375px;
+    width: 360px;
+    margin: 0;
+    padding: 15px;
   }
 }
 a {
@@ -76,6 +84,16 @@ header {
 @media (max-width: 400px) {
   header {
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  header .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 header h1 {
@@ -88,6 +106,9 @@ header h1 {
 @media (max-width: 400px) {
   header h1 {
     min-width: 100%;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
   }
 }
 header p {
@@ -95,13 +116,23 @@ header p {
   font-size: 1.5rem;
   color: hsl(257, 7%, 63%);
 }
+@media (max-width: 400px) {
+  header p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
 header .image {
   position: relative;
   left: 5rem;
 }
 @media (max-width: 400px) {
   header .image {
+    position: static;
     order: -1;
+    width: 100%;
   }
 }
 header button {
@@ -109,6 +140,11 @@ header button {
   padding: 0.75rem 2.5rem;
   margin-top: 1rem;
   margin-left: 0.25rem;
+}
+@media (max-width: 400px) {
+  header button {
+    margin-left: 0;
+  }
 }
 .full-width-main {
   margin: 0 -9999rem;
@@ -157,6 +193,7 @@ main .link-shortener {
 @media (max-width: 400px) {
   main .link-shortener {
     flex-direction: column;
+    width: 267.5px;
   }
 }
 main .link-shortener .input-container {
@@ -216,6 +253,11 @@ main .cards-wrapper .card {
   background-color: white;
   padding: 0 2rem;
   margin: 0 1rem;
+}
+@media (max-width: 400px) {
+  main .cards-wrapper .card {
+    margin-top: 1rem;
+  }
 }
 main .cards-wrapper .card img {
   position: relative;
@@ -292,14 +334,31 @@ footer .call-to-action h3 {
   color: white;
   font-size: 2.5rem;
 }
+@media (max-width: 400px) {
+  footer .call-to-action h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 footer .call-to-action button {
   margin-top: 1rem;
   padding: 1rem 3rem;
+}
+@media (max-width: 400px) {
+  footer .call-to-action button {
+    font-size: 1.25rem;
+  }
 }
 footer nav {
   display: flex;
   justify-content: space-between;
   background-color: black;
+}
+@media (max-width: 400px) {
+  footer nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 footer nav h2 {
   color: white;
@@ -311,6 +370,13 @@ footer nav .column {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media (max-width: 400px) {
+  footer nav .column {
+    margin: 0 auto;
+    margin-top: 2rem;
+    align-items: center;
+  }
+}
 footer nav .column h5 {
   font-size: 1rem;
   color: white;
@@ -318,10 +384,17 @@ footer nav .column h5 {
 }
 footer nav .column a {
   padding: 0.25rem 0;
+  font-weight: normal;
 }
 footer nav .social-icons {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 400px) {
+  footer nav .social-icons {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 400px) {
   footer nav {
