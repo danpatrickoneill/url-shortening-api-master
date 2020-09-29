@@ -31,6 +31,12 @@ button {
   font-size: 1rem;
   font-weight: bold;
 }
+button:active {
+  background-color: #9ce2e1;
+}
+button:focus {
+  outline: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -199,6 +205,16 @@ main .cards-wrapper .card-3 {
 .saved-link .action-items {
   display: flex;
   align-items: center;
+}
+.saved-link .action-items a {
+  color: hsl(180, 66%, 49%);
+  padding-right: 0.5rem;
+}
+.saved-link .action-items button {
+  position: relative;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  width: 8rem;
 }
 .full-width-footer {
   margin: 0 -9999rem;
