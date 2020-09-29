@@ -14,6 +14,19 @@ const MainContent = () => {
         statistics dashboard.
       </p>
       <div className='cards-wrapper'>
+        <svg className='desktop-line' height='300' width='1000'>
+          <line
+            x1='100'
+            y1='200'
+            x2='4000'
+            y2='200'
+            style={{
+              stroke: 'hsl(180, 66%, 49%)',
+              strokeWidth: 10,
+              position: 'absolute',
+            }}
+          />
+        </svg>
         <div className='card card-1'>
           <img src={graph} alt='A generic bar graph indicating growth' />
           <h4>Brand Recognition</h4>
