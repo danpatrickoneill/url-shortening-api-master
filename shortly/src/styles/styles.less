@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .App {
@@ -63,6 +64,7 @@ nav {
     color: black;
   }
   a {
+    padding: 0 1rem;
     color: @link-gray;
     &:hover {
       color: black;
@@ -76,14 +78,50 @@ header {
   padding: 2rem 0 8rem;
 }
 
+.full-width-main {
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+  padding-bottom: 2rem;
+}
+
 main {
-  background-color: @link-gray;
+  background-color: #f0f1f6;
   padding: 8rem 0 2rem;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .cards-wrapper {
+    display: flex;
+  }
+
+  .card {
+    max-width: 30%;
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+
+    img {
+      position: relative;
+      padding: 1rem;
+      background-color: @dark-violet;
+      border-radius: 100%;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
 }
 
 .link-shortener {
-  margin: auto;
-  margin-top: -10rem;
+  position: relative;
+  top: -3rem;
   padding: 2rem;
   background-image: url('../images/bg-shorten-desktop.svg');
   background-color: @very-dark-violet;
@@ -100,6 +138,30 @@ main {
   button {
     width: 20%;
   }
+}
+
+.saved-link {
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0.25rem;
+
+  .action-items {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.full-width-footer {
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+}
+
+.full-width-nav {
+  margin: 0 -9999rem;
+  padding: 2rem 9999rem;
 }
 
 footer {
@@ -138,11 +200,13 @@ footer {
         color: white;
         margin: 0;
       }
+      a {
+        padding: 0.25rem 0;
+      }
     }
     .social-icons {
       display: flex;
       justify-content: space-between;
-      width: 8rem;
     }
   }
 }
