@@ -9,8 +9,14 @@ body {
   width: 80%;
   margin: auto;
 }
+@media (max-width: 400px) {
+  .App {
+    max-width: 375px;
+  }
+}
 h1 {
   font-size: 3.5rem;
+  font-weight: bold;
 }
 a {
   text-decoration: none;
@@ -23,6 +29,7 @@ button {
   padding: 0.5rem 2rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+  font-weight: bold;
 }
 nav {
   display: flex;
@@ -39,10 +46,34 @@ nav a {
 nav a:hover {
   color: black;
 }
+nav .nav-link {
+  display: inline;
+}
+@media (max-width: 400px) {
+  nav .nav-link {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  nav .hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: hsl(0, 0%, 75%);
+    margin: 0.5rem;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
   padding: 2rem 0 8rem;
+}
+@media (max-width: 400px) {
+  header {
+    flex-direction: column;
+  }
+  header .image {
+    order: -1;
+  }
 }
 .full-width-main {
   margin: 0 -9999rem;
@@ -53,31 +84,21 @@ main {
   background-color: #f0f1f6;
   padding: 8rem 0 2rem;
 }
+main .desktop-line {
+  position: absolute;
+}
+@media (max-width: 400px) {
+  main .desktop-line {
+    display: none;
+  }
+}
 main h3 {
   text-align: center;
 }
 main p {
   text-align: center;
 }
-main .cards-wrapper {
-  display: flex;
-}
-main .card {
-  max-width: 30%;
-  background-color: white;
-  padding: 2rem;
-  margin: 1rem;
-}
-main .card img {
-  position: relative;
-  padding: 1rem;
-  background-color: hsl(257, 27%, 26%);
-  border-radius: 100%;
-}
-main .card p {
-  text-align: left;
-}
-.link-shortener {
+main .link-shortener {
   position: relative;
   top: -3rem;
   padding: 2rem;
@@ -87,13 +108,85 @@ main .card p {
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
-.link-shortener input {
-  width: 70%;
+@media (max-width: 400px) {
+  main .link-shortener {
+    flex-direction: column;
+  }
+}
+main .link-shortener .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .link-shortener .input-container input {
+  width: 90%;
   border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
 }
-.link-shortener button {
+main .link-shortener .input-container input:focus {
+  outline: none;
+}
+@media (max-width: 400px) {
+  main .link-shortener .input-container input {
+    width: 90%;
+    margin: 0 auto 1rem;
+  }
+}
+main .link-shortener .input-container p {
+  padding: 0;
+  margin: 0;
+  color: red;
+  font-size: 0.75rem;
+  text-align: left;
+}
+main .link-shortener button {
   width: 20%;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+}
+@media (max-width: 400px) {
+  main .link-shortener button {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+main .cards-wrapper {
+  display: flex;
+  padding: 2rem;
+}
+@media (max-width: 400px) {
+  main .cards-wrapper {
+    flex-direction: column;
+  }
+}
+main .cards-wrapper .card {
+  position: relative;
+  max-width: 30%;
+  background-color: white;
+  padding: 0 2rem;
+  margin: 0 1rem;
+}
+main .cards-wrapper .card img {
+  position: relative;
+  top: -1rem;
+  padding: 1rem;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 100%;
+}
+main .cards-wrapper .card h4 {
+  margin-top: 0;
+}
+main .cards-wrapper .card p {
+  text-align: left;
+}
+main .cards-wrapper .card-1 {
+  top: -1rem;
+}
+main .cards-wrapper .card-3 {
+  top: 1rem;
 }
 .saved-link {
   margin: 1rem auto;
@@ -158,4 +251,9 @@ footer nav .column a {
 footer nav .social-icons {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 400px) {
+  footer nav {
+    flex-direction: column;
+  }
 }
