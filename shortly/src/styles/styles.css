@@ -6,17 +6,14 @@ body {
 }
 .App {
   max-width: 1440px;
-  width: 80%;
+  width: 60%;
   margin: auto;
+  margin-top: 3rem;
 }
 @media (max-width: 400px) {
   .App {
     max-width: 375px;
   }
-}
-h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
 }
 a {
   text-decoration: none;
@@ -44,10 +41,13 @@ nav {
 nav h2 {
   display: inline;
   color: black;
+  font-size: 2rem;
 }
 nav a {
   padding: 0 1rem;
   color: #cccccc;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 nav a:hover {
   color: black;
@@ -71,20 +71,50 @@ nav .nav-link {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0 8rem;
+  margin-top: 5rem;
 }
 @media (max-width: 400px) {
   header {
     flex-direction: column;
   }
+}
+header h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  min-width: 40rem;
+  line-height: 6rem;
+  margin-bottom: 0;
+}
+@media (max-width: 400px) {
+  header h1 {
+    min-width: 100%;
+  }
+}
+header p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: hsl(257, 7%, 63%);
+}
+header .image {
+  position: relative;
+  left: 5rem;
+}
+@media (max-width: 400px) {
   header .image {
     order: -1;
   }
+}
+header button {
+  font-size: 1.25rem;
+  padding: 0.75rem 2.5rem;
+  margin-top: 1rem;
+  margin-left: 0.25rem;
 }
 .full-width-main {
   margin: 0 -9999rem;
   padding: 0 9999rem;
   padding-bottom: 2rem;
+  margin-top: 10rem;
 }
 main {
   background-color: #f0f1f6;
@@ -99,17 +129,25 @@ main .desktop-line {
   }
 }
 main h3 {
+  font-size: 2.5rem;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
 }
 main p {
+  margin: 0 auto;
   text-align: center;
+  width: 65%;
+  color: #cccccc;
 }
 main .link-shortener {
   position: relative;
-  top: -3rem;
-  padding: 2rem;
+  top: -5rem;
+  width: 92%;
+  padding: 2.5rem;
+  padding-top: 3rem;
   background-image: url('../images/bg-shorten-desktop.svg');
-  background-color: hsl(260, 8%, 14%);
+  background-color: hsl(257, 27%, 26%);
   z-index: 1;
   border-radius: 0.5rem;
   display: flex;
@@ -129,8 +167,11 @@ main .link-shortener .input-container {
 main .link-shortener .input-container input {
   width: 90%;
   border-radius: 0.5rem;
-  padding: 0.75rem;
-  margin-top: 0.75rem;
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  height: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
 }
 main .link-shortener .input-container input:focus {
   outline: none;
@@ -147,11 +188,12 @@ main .link-shortener .input-container p {
   color: red;
   font-size: 0.75rem;
   text-align: left;
+  color: hsl(257, 7%, 63%);
 }
 main .link-shortener button {
   width: 20%;
   border-radius: 0.5rem;
-  margin-top: 0.75rem;
+  padding: 1rem 0;
 }
 @media (max-width: 400px) {
   main .link-shortener button {
@@ -161,7 +203,7 @@ main .link-shortener button {
 }
 main .cards-wrapper {
   display: flex;
-  padding: 2rem;
+  padding: 4rem 0;
 }
 @media (max-width: 400px) {
   main .cards-wrapper {
@@ -170,29 +212,34 @@ main .cards-wrapper {
 }
 main .cards-wrapper .card {
   position: relative;
-  max-width: 30%;
+  height: 20rem;
   background-color: white;
   padding: 0 2rem;
   margin: 0 1rem;
 }
 main .cards-wrapper .card img {
   position: relative;
-  top: -1rem;
+  top: -2rem;
   padding: 1rem;
   background-color: hsl(257, 27%, 26%);
   border-radius: 100%;
 }
 main .cards-wrapper .card h4 {
-  margin-top: 0;
+  margin: 0 auto;
 }
 main .cards-wrapper .card p {
+  display: inline;
   text-align: left;
+  font-size: 1rem;
 }
 main .cards-wrapper .card-1 {
-  top: -1rem;
+  top: -2rem;
 }
 main .cards-wrapper .card-3 {
-  top: 1rem;
+  top: 2rem;
+}
+.saved-links-container {
+  margin-top: -4rem;
 }
 .saved-link {
   margin: 1rem auto;
@@ -201,6 +248,12 @@ main .cards-wrapper .card-3 {
   justify-content: space-between;
   background-color: white;
   border-radius: 0.25rem;
+}
+.saved-link p {
+  margin: 0;
+  color: black;
+  text-align: left;
+  max-width: 50%;
 }
 .saved-link .action-items {
   display: flex;
@@ -219,32 +272,34 @@ main .cards-wrapper .card-3 {
 .full-width-footer {
   margin: 0 -9999rem;
   padding: 0 9999rem;
+  background-image: url('../images/bg-boost-desktop.svg');
+  background-color: hsl(257, 27%, 26%);
+  background-size: 2415px 230px;
 }
 .full-width-nav {
   margin: 0 -9999rem;
-  padding: 2rem 9999rem;
-}
-footer {
-  background-image: url('../images/bg-shorten-desktop.svg');
-  background-color: hsl(260, 8%, 14%);
+  padding: 4rem 9999rem;
 }
 footer .call-to-action {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 footer .call-to-action h3 {
   margin: 0;
-  margin-bottom: 1rem;
   color: white;
+  font-size: 2.5rem;
+}
+footer .call-to-action button {
+  margin-top: 1rem;
+  padding: 1rem 3rem;
 }
 footer nav {
   display: flex;
   justify-content: space-between;
   background-color: black;
-  padding: 2rem;
 }
 footer nav h2 {
   color: white;

@@ -8,10 +8,10 @@ const Nav = () => {
           <h2>Shortly</h2>
         </a>
         <a className='nav-link' href='#'>
-          Pricing
+          Features
         </a>
         <a className='nav-link' href='#'>
-          Features
+          Pricing
         </a>
         <a className='nav-link' href='#'>
           Resources
