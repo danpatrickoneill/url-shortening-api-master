@@ -7,6 +7,7 @@
 // Colors
 @link-gray: #cccccc;
 @cyan: hsl(180, 66%, 49%);
+@active-cyan: #9ce2e1;
 @dark-violet: hsl(257, 27%, 26%);
 @red: hsl(0, 87%, 67%);
 @other-gray: hsl(0, 0%, 75%);
@@ -60,6 +61,14 @@ button {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: bold;
+
+  &:active {
+    background-color: @active-cyan;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 nav {
@@ -238,6 +247,18 @@ main {
   .action-items {
     display: flex;
     align-items: center;
+
+    a {
+      color: @cyan;
+      padding-right: 0.5rem;
+    }
+
+    button {
+      position: relative;
+      margin-left: 1rem;
+      border-radius: 0.5rem;
+      width: 8rem;
+    }
   }
 }
 
