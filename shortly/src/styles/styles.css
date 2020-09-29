@@ -33,6 +33,7 @@ nav h2 {
   color: black;
 }
 nav a {
+  padding: 0 1rem;
   color: #cccccc;
 }
 nav a:hover {
@@ -43,14 +44,38 @@ header {
   justify-content: space-between;
   padding: 2rem 0 8rem;
 }
-main {
-  background-color: #f0f1f6;
-  padding: 8rem 0 2rem;
-}
 .full-width-main {
   margin: 0 -9999rem;
   padding: 0 9999rem;
   padding-bottom: 2rem;
+}
+main {
+  background-color: #f0f1f6;
+  padding: 8rem 0 2rem;
+}
+main h3 {
+  text-align: center;
+}
+main p {
+  text-align: center;
+}
+main .cards-wrapper {
+  display: flex;
+}
+main .card {
+  max-width: 30%;
+  background-color: white;
+  padding: 2rem;
+  margin: 1rem;
+}
+main .card img {
+  position: relative;
+  padding: 1rem;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 100%;
+}
+main .card p {
+  text-align: left;
 }
 .link-shortener {
   position: relative;
@@ -127,8 +152,10 @@ footer nav .column h5 {
   color: white;
   margin: 0;
 }
+footer nav .column a {
+  padding: 0.25rem 0;
+}
 footer nav .social-icons {
   display: flex;
   justify-content: space-between;
-  width: 8rem;
 }

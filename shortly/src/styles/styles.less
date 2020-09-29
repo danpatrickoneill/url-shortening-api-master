@@ -64,6 +64,7 @@ nav {
     color: black;
   }
   a {
+    padding: 0 1rem;
     color: @link-gray;
     &:hover {
       color: black;
@@ -77,15 +78,45 @@ header {
   padding: 2rem 0 8rem;
 }
 
-main {
-  background-color: #f0f1f6;
-  padding: 8rem 0 2rem;
-}
-
 .full-width-main {
   margin: 0 -9999rem;
   padding: 0 9999rem;
   padding-bottom: 2rem;
+}
+
+main {
+  background-color: #f0f1f6;
+  padding: 8rem 0 2rem;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .cards-wrapper {
+    display: flex;
+  }
+
+  .card {
+    max-width: 30%;
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+
+    img {
+      position: relative;
+      padding: 1rem;
+      background-color: @dark-violet;
+      border-radius: 100%;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
 }
 
 .link-shortener {
@@ -169,11 +200,13 @@ footer {
         color: white;
         margin: 0;
       }
+      a {
+        padding: 0.25rem 0;
+      }
     }
     .social-icons {
       display: flex;
       justify-content: space-between;
-      width: 8rem;
     }
   }
 }

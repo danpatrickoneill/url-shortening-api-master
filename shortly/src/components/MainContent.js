@@ -14,7 +14,7 @@ const MainContent = () => {
         statistics dashboard.
       </p>
       <div className='cards-wrapper'>
-        <div className='card'>
+        <div className='card card-1'>
           <img src={graph} alt='A generic bar graph indicating growth' />
           <h4>Brand Recognition</h4>
           <p>
@@ -22,7 +22,7 @@ const MainContent = () => {
             mean a thing. Branded links help instill confidence in your content.
           </p>
         </div>
-        <div className='card'>
+        <div className='card card-2'>
           <img
             src={gauge}
             alt='A generic radial gauge pointing right to its middle'
@@ -33,7 +33,7 @@ const MainContent = () => {
             where people engage with your content helps inform better decisions.
           </p>
         </div>
-        <div className='card'>
+        <div className='card card-3'>
           <img src={utensils} alt='A marker, a fountain pen and a paintbrush' />
           <h4>Fully Customizable</h4>
           <p>
